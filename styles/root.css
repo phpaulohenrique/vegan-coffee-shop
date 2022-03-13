@@ -1,0 +1,23 @@
+
+html{
+    
+    font-size: 62.5%;
+
+
+    --green-50: rgb(69, 180, 47);
+    --green-100: rgb(52, 182, 0);
+    --green-200: rgb(40, 139, 0);
+    --green-400: rgb(12, 104, 0);
+
+    --red-200:  rgb(204, 0, 0);
+    --red-400: rgb(163, 0, 0);
+
+}
+
+body{
+    
+    font-family: 'Lato', Tahoma, Helvetica, Verdana;
+    box-sizing: border-box;
+
+}
+

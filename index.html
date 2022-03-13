@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/root.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <title>Vegan coffee shop</title>
+
+
+</head>
+<body>
+
+    <header>
+
+        <h1>Vegan coffee shop</h1>
+        <!-- <a class="link-cart" href="/cart"><img class="img-cart" src="/assets/shopping-cart.svg" alt="Cart here">
+            <span class="total-items-in-cart">0</span></a> -->
+
+    </header>
+
+    <main>
+
+        <h2>Hamburgers</h2>
+
+        <section class="cards-products">
+
+
+        </section>
+
+        <hr>
+
+        <h2>My Cart</h2>
+
+        <section class="cart-items">
+
+        </section>
+            <!-- items of cart here -->
+
+        <hr>
+        
+        <h2>Total</h2>
+
+        <section>
+
+            <div class="cart">
+
+
+                <div class="cart-items">
+                    <!-- render cart items here -->
+                </div>
+
+                <div class="cart-footer">
+
+                    <p class="subtotal">
+                        Subtotal (0 items): U$ 0
+                    </p>
+
+                    <p class="discont">
+                        Discount: U$ 0
+                    </p>
+
+                    <p class="total-final">
+                        Total: U$ 0
+                    </p>
+
+                    <p class="cupom-info">
+
+                    </p>
+
+                    <div class="div-cupom">
+
+                        <label id="cupom" for="cupom">CUPOM
+                            <input id="cupom" type="text" class="cupom" value="" onChange="checkCupom(this.value)" maxlength="10" size="10">
+                        </label>
+
+                        <button class="btn-ok" >OK</button>
+
+                    </div>
+
+
+                    <!-- <div class="checkout">
+                        Proceed to checkout
+                    </div> -->
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+        // const porductsListEl = document.querySelector(".products-list");
+        // const seeMoreBtn = document.querySelector(".see-more-btn");
+
+        // seeMoreBtn.addEventListener('click', () => {
+        //     porductsListEl.scrollIntoView({ behavior: "smooth" })
+        // })
+
+    </script>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/app.js"></script>
+
+    
+</body>
+
+
+</html>
