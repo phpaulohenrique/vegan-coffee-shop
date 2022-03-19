@@ -1,6 +1,6 @@
 # Vegan Coffe Shop
 
-Vegan Coffe Shop
+Vegan Coffe Shop 🌱
 
 language: pt-Br
 
