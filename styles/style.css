@@ -154,21 +154,20 @@ footer > p {
     margin-bottom: 60px;
 }
 
-
 .cart{
 
     margin-left: 1.5rem;
 }
 
 .total-final{
+
     display: inline-block;
-    width: 30vw;
+    width: 50vw;
 
     border-top: 1px solid rgb(0, 0, 0);
 }
 
 .cupom-info{
-
 
     margin-top: 10px;
     font-size: 1.5rem;
@@ -176,18 +175,19 @@ footer > p {
 
 .img-item-card{
 
-    max-width: 17vw;
-    min-width: 17vw;
-    max-height: 30vh;
-    min-height: 30vh;
+    max-width: 280px;
+    max-height: 280px;
+
+    min-width: 280px;
+    min-height: 280px;
 
 
 }
 
 .img-item-cart{
 
-    width: 12vw;
-    height: 20vh;
+    width: 130px;
+    height: 130px;
 }
 
 .link-cart{
@@ -200,8 +200,9 @@ footer > p {
 
 .icon-minus-plus-remove{
 
-    width: 2.3vw;
-    height: 5vh;
+    width: 35px;
+    height: 35px;
+
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -214,7 +215,7 @@ footer > p {
 
 .icon-trash{
 
-    margin-left: 40px;
+    margin-left: 50px;
 
 }
 
@@ -244,8 +245,10 @@ footer > p {
     background-color: rgb(214, 207, 173);
     border: 1px solid var(--green-200);
 
+    text-align: center;
+
     margin-bottom: 1.8rem;
-    margin: .5%;
+    margin: 15px;
     padding: 1.8rem;
     /* margin-left: 2rem; */
     border-radius: 1rem;
@@ -266,11 +269,14 @@ footer > p {
     border: 1px solid var(--green-200);
 
     display: flex;
-    margin-bottom: 15px;
-    min-width: 85vw;
-    max-width: 90vw;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: calc(100vw - 45px);
+
+
+
     border-radius: 20px;
-    padding: 1%;
+    padding: 10px;
 }
 
 .units-item{
@@ -279,6 +285,7 @@ footer > p {
 }
 
 .btn-ok{
+
     padding: .9rem 3rem;
     margin-left: 1rem;
 
@@ -288,14 +295,6 @@ footer > p {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 70%;
-}
-
-.cart-item{
-    margin-left: 2rem;
-}
-
-.cart-items{
-    margin-bottom: 70px;
 }
 
 .total{
