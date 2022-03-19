@@ -18,6 +18,7 @@ const cupomInfo = document.querySelector(".cupom-info");
 let cart = [];
 let discontPercentage = 0;
 
+
 // RENDER PRODUCTS
 
 function renderProducts() {
@@ -33,7 +34,8 @@ function renderProducts() {
                 <div class="product-info">
 
                     <h3>${product.name}</h3>
-                    <p class="product-price">U$ ${product.price}</p>
+
+                    <p class="product-price">U$ ${product.price} </p>
                     
                     <button class="btn-add-to-card" onClick="addToCart(${product.id})">Buy</button>
                 
@@ -53,6 +55,9 @@ renderProducts();
 function addToCart(id) {
 
     // check if product already exist in cart
+    
+    cartItems.scrollIntoView({ behavior: "smooth" });
+    
 
     if (cart.some((item) => item.id === id)) {
 
@@ -112,9 +117,20 @@ function removeItemFromCart(id){
     cart = cart.filter((product) => product.id !== id);
     renderCartItems();
     renderSubtotal();
-    
 
 }
+
+
+// function newPrice(id) {
+
+//     console.log(id)
+
+//     const test = products.find((product) => product.id === id );
+//     test.price = 100;
+//     console.log(test);
+
+
+// }
 
 
 // CUPOM
@@ -182,60 +198,72 @@ function renderSubtotal() {
 
     });
 
-    // if(totalItems > 4 ) { totalDiscont  = 1 };
-    // console.log(totalPrice)
-    // total = totalPrice - totalDiscont;
-
     subtotalEl.innerHTML = `Subtotal (${totalItems} items): U$ ${totalPrice.toFixed(2)}`;
 
     discont.innerHTML = `Discount: U$ -${totalDiscont.toFixed(2)}`;
 
     totalfinal.innerHTML = `Total: U$ ${total.toFixed(2)}`;
 
-    // totalItemsInCartEl.innerHTML = totalItems;
 }
+
+
 
 
 function renderCartItems() {
 
     cartItems.innerHTML = ""; // clear cart element
+    
+
 
     cart.forEach((item) =>  {
-
+        
         cartItems.innerHTML += `
 
-                <div class="cart-item">
+        <div class="cart-item">
 
-                    <div class="item-info" onclick="removeItemFromCart(${item.id})">
-                        <img class="img-item-cart" src="/assets/${item.img}.jpeg" alt="${item.name}">
+            <div>
 
-                    </div>
+                <img class="img-item-cart" src="/assets/${
+                    item.img
+                }.jpeg" alt="${item.name}">
+                    
+
+            </div>
                     
                     
-                    <div class="units-item">
-                        
-                        <h3>${item.name}</h3>
-                        <p class="cart-item-value">U$ ${item.price}</p>
+            <div class="units-item">
+                    
+                <h3>${item.name}</h3>
+                <p class="cart-item-value">U$ ${item.price} x (${
+                    item.numberOfUnits
+                    }) Units</p> 
 
-                        <div class="container-btn-minus-plus-remove">
-
-                            
-                            <img class="icon-minus-plus-remove icon-minus" src="/assets/minus.svg" alt="minus" 
-                                onclick="changeNumberOfUnits('minus', ${item.id})">
-
-                            <span class="number-units">${item.numberOfUnits}</span>
-
-                            <img class="icon-minus-plus-remove icon-plus" src="/assets/plus.svg" alt="minus" 
-                                onclick="changeNumberOfUnits('plus', ${item.id})"> 
-
-                            <img class="icon-minus-plus-remove icon-trash " src="/assets/trash.svg" alt="trash" 
-                                onclick="removeItemFromCart(${item.id})">
-                        
-                        </div>
-
-                    </div>
-                </div>
+                <p class="cart-item-value">Total: U$ ${
+                    item.price * item.numberOfUnits
+                }  </p>
                 
-            `;
-        });
+
+                <div class="container-btn-minus-plus-remove">
+
+                    
+                    <img class="icon-minus-plus-remove icon-minus" src="/assets/minus.svg" alt="minus" 
+                        onclick="changeNumberOfUnits('minus', ${item.id})">
+
+                    <span class="number-units">${item.numberOfUnits}</span>
+
+                    <img class="icon-minus-plus-remove icon-plus" src="/assets/plus.svg" alt="minus" 
+                        onclick="changeNumberOfUnits('plus', ${item.id})"> 
+
+                    <img class="icon-minus-plus-remove icon-trash " src="/assets/trash.svg" alt="trash" 
+                        onclick="removeItemFromCart(${item.id})">
+
+                
+                </div>
+
+            </div>
+
+        </div>
+            
+        `;
+    });
 }
