@@ -1,16 +1,19 @@
 
-
 // SELECT ELEMENTS
 
 const productSession = document.querySelector(".cards-products");
 const cartItems = document.querySelector(".cart-items");
 const btnAddCart = document.getElementsByClassName("btn-add-to-card");
 
+const sectionCart = document.querySelector(".section-cart");
+const sectionTotal = document.querySelector(".section-total");
+
+
 const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 const subtotalEl = document.querySelector(".subtotal");
 const discont = document.querySelector(".discont")
 
-const totalfinal = document.querySelector(".total-final");
+const totalFinal = document.querySelector(".total-final");
 const valueCupom = document.querySelector("input").value;
 const cupomInfo = document.querySelector(".cupom-info");
 
@@ -18,6 +21,29 @@ const cupomInfo = document.querySelector(".cupom-info");
 let cart = [];
 let discontPercentage = 0;
 
+
+function hideSectionCartAndTotal() {
+
+    sectionCart.classList.add("hide");
+    sectionTotal.classList.add("hide");
+
+}
+console.log(cart)
+
+if (cart.length == 0){
+
+    
+    hideSectionCartAndTotal();
+}
+
+
+
+function showSectionCartAndTotal() {
+
+    sectionCart.classList.remove("hide");
+    sectionTotal.classList.remove("hide");
+
+}
 
 // RENDER PRODUCTS
 
@@ -55,6 +81,7 @@ renderProducts();
 function addToCart(id) {
 
     // check if product already exist in cart
+    showSectionCartAndTotal();
     
     cartItems.scrollIntoView({ behavior: "smooth" });
     
@@ -110,27 +137,25 @@ function changeNumberOfUnits(action, id) {
 
 }
 
+
+
+//REMOVE ITEM FROM CART
+
 function removeItemFromCart(id){
 
     // console.log(cart);
 
     cart = cart.filter((product) => product.id !== id);
+
+    
+    if (cart.length == 0) {
+        hideSectionCartAndTotal();
+    }
+    
     renderCartItems();
     renderSubtotal();
 
 }
-
-
-// function newPrice(id) {
-
-//     console.log(id)
-
-//     const test = products.find((product) => product.id === id );
-//     test.price = 100;
-//     console.log(test);
-
-
-// }
 
 
 // CUPOM
@@ -202,7 +227,7 @@ function renderSubtotal() {
 
     discont.innerHTML = `Discount: U$ -${totalDiscont.toFixed(2)}`;
 
-    totalfinal.innerHTML = `Total: U$ ${total.toFixed(2)}`;
+    totalFinal.innerHTML = `Total: U$ ${total.toFixed(2)}`;
 
 }
 

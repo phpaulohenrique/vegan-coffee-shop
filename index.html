@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/root.css">
     <link rel="stylesheet" href="/styles/style.css">
 
-    <title>Vegan coffee shop</title>
+    <title>Vegan Coffee Shop</title>
 
 
 </head>
@@ -17,68 +17,71 @@
 
     <header>
 
-        <h1>Vegan coffee shop</h1>
+        <h1>Vegan Coffee Shop</h1>
         <!-- <a class="link-cart" href="/cart"><img class="img-cart" src="/assets/shopping-cart.svg" alt="Cart here">
             <span class="total-items-in-cart">0</span></a> -->
 
     </header>
 
     <main>
-
-
-
-        <h2>Hamburgers</h2>
-
-        <section class="cards-products">
         
+        <section >
+
+            <h2>Hamburgers</h2>
+
+            <div class="cards-products">
+
+                
+            </div>
+        
+            <hr>
         </section>
 
-        <hr>
 
-        <h2>My Cart</h2>
+        <section class="section-cart" >
+            
+            <h2>Cart</h2>
 
-        <section class="cart-items">
+            <div class="cart-items">
+                
+            </div>
 
+            <hr>
         </section>
 
-        <hr>
+        
+        <section class="section-total">
 
+            <h2>Total</h2>
 
-        <h2>Total</h2>
+            <div class="total">
 
-        <section>
+                <p class="subtotal">
+                    Subtotal (0 items): U$ 0
+                </p>
 
-            <div class="cart">
+                <p class="discont">
+                    Discount: U$ 0
+                </p>
 
-                <div class="cart-footer">
+                <p class="total-final">
+                    Total: U$ 0
+                </p>
 
-                    <p class="subtotal">
-                        Subtotal (0 items): U$ 0
-                    </p>
+                <p class="cupom-info">
 
-                    <p class="discont">
-                        Discount: U$ 0
-                    </p>
+                </p>
 
-                    <p class="total-final">
-                        Total: U$ 0
-                    </p>
+                <div class="div-cupom">
 
-                    <p class="cupom-info">
+                    <label id="cupom" for="cupom">CUPOM
+                        <input id="cupom" type="text" class="cupom" value="" onChange="checkCupom(this.value)" maxlength="10" size="10">
+                    </label>
 
-                    </p>
-
-                    <div class="div-cupom">
-
-                        <label id="cupom" for="cupom">CUPOM
-                            <input id="cupom" type="text" class="cupom" value="" onChange="checkCupom(this.value)" maxlength="10" size="10">
-                        </label>
-
-                        <button class="btn-ok" >OK</button>
-
-                    </div>
+                    <button class="btn-ok" >OK</button>
 
                 </div>
+
             </div>
 
         </section>
@@ -87,6 +90,8 @@
 
     <footer>
 
+        <p>Todos os direitos reservados<br>Desenvolvido por Paulo Henrique</p>
+
     </footer>
 
     <script src="./scripts/products.js"></script>
@@ -94,6 +99,4 @@
 
     
 </body>
-
-
 </html>
