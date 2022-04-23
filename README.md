@@ -1,10 +1,13 @@
 # Vegan Coffee Shop
 
+
 Vegan Coffee Shop 🌱
 
-language: pt-Br
+language: pt-br
 
 Project made in VanillaJS.
 
-hosted on netlify 
-link site: http://vegan-coffe-shop-phmelo.netlify.app/
+<hr>
+hosted on netlify.
+
+link: https://vegancoffeeshop-ph.netlify.app
