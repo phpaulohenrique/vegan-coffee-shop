@@ -10,4 +10,4 @@ Project made in VanillaJS.
 <hr>
 hosted on netlify.
 
-link: https://vegancoffeeshop-ph.netlify.app
+link site: https://vegancoffeeshop-ph.netlify.app
