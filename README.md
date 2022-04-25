@@ -13,3 +13,6 @@ Project made in VanillaJS.
 hosted on netlify.
 
 link site: https://vegancoffeeshop-ph.netlify.app
+
+
+.
