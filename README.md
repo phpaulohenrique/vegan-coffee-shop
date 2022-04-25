@@ -3,6 +3,8 @@
 
 Vegan Coffee Shop 🌱
 
+Responsive ✅
+
 language: pt-br
 
 Project made in VanillaJS.
