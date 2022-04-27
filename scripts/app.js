@@ -55,7 +55,7 @@ function renderProducts() {
 
             <div class="card-product">
 
-                <img class="img-item-card" src="./assets/${product.img}.jpeg" alt="">
+                <img class="img-item-card" src="/vegan-coffe-shop/assets/${product.img}.jpeg" alt="">
 
                 <div class="product-info">
 
