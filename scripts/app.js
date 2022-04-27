@@ -55,7 +55,7 @@ function renderProducts() {
 
             <div class="card-product">
 
-                <img class="img-item-card" src="/assets/${product.img}.jpeg" alt="">
+                <img class="img-item-card" src="./assets/${product.img}.jpeg" alt="">
 
                 <div class="product-info">
 
@@ -248,7 +248,7 @@ function renderCartItems() {
 
             <div>
 
-                <img class="img-item-cart" src="/assets/${
+                <img class="img-item-cart" src="./assets/${
                     item.img
                 }.jpeg" alt="${item.name}">
                     
@@ -271,15 +271,15 @@ function renderCartItems() {
                 <div class="container-btn-minus-plus-remove">
 
                     
-                    <img class="icon-minus-plus-remove icon-minus" src="/assets/minus.svg" alt="minus" 
+                    <img class="icon-minus-plus-remove icon-minus" src="./assets/minus.svg" alt="minus" 
                         onclick="changeNumberOfUnits('minus', ${item.id})">
 
                     <span class="number-units">${item.numberOfUnits}</span>
 
-                    <img class="icon-minus-plus-remove icon-plus" src="/assets/plus.svg" alt="minus" 
+                    <img class="icon-minus-plus-remove icon-plus" src="./assets/plus.svg" alt="minus" 
                         onclick="changeNumberOfUnits('plus', ${item.id})"> 
 
-                    <img class="icon-minus-plus-remove icon-trash " src="/assets/trash.svg" alt="trash" 
+                    <img class="icon-minus-plus-remove icon-trash " src="./assets/trash.svg" alt="trash" 
                         onclick="removeItemFromCart(${item.id})">
 
                 
